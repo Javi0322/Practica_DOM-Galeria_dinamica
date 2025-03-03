@@ -15,10 +15,9 @@
         <img
           src="./assets/images/logo.png"
           alt="BYmyCAR Madrid"
-          title="BYmyCAR Madrid"
-          width="280" />
+          title="BYmyCAR Madrid" />
       </a>
-      <nav>
+      <nav class="nav">
         <ul>
           <li>
             <a href="#vehiculos-nuevos">Vehículos nuevos</a>
@@ -75,12 +74,35 @@
     </header>
 
     <main>
-      <section>
-        <ol class="breadcrumb">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Coches Ocasión</a></li>
-        </ol>
-        <h1>Buscador de Vehículos Ocasión</h1>
+      <section class="sec-header">
+        <div class="section-header">
+          <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Coches Ocasión</a></li>
+          </ol>
+          <h1>Buscador de Vehículos Ocasión</h1>
+        </div>
+        <div class="section-subheader">
+          <p><strong>180</strong> Vehículos encontrados</p>
+          <div>
+            <p><img src="./assets/images/favoritos.png" alt="favoritos" /> 0</p>
+            <p>
+              <img src="./assets/images/comparativa.png" alt="comparativa" />0
+            </p>
+            <p>
+              <select id="ordenar">
+                <option value="-1"><strong>Ordenar por</strong></option>
+                <option value="Precio Ascendente">Precio Ascendente</option>
+                <option value="Precio Descendente">Precio Descendente</option>
+                <option value="Potencia Ascendente">Potencia Ascendente</option>
+                <option value="Potencia Descendente">
+                  Potencia Descendente
+                </option>
+              </select>
+            </p>
+          </div>
+          <button class="buscador">Filtrar</button>
+        </div>
       </section>
       <section class="main-content">
         <form id="form_buscador" method="">
@@ -316,148 +338,746 @@
             </select>
           </details>
         </form>
-        <div id="vehicle-result"></div>
+        <div id="vehicle-result">
+          <div class="vehicle-result-1">
+            <div class="vehicle-result-1-img img-1">
+              <div class="vehicle-result-1-img-options">
+                <img src="./assets/images/favoritos.png" alt="favorito" />
+                <img src="./assets/images/comparativa.png" alt="comparar" />
+              </div>
+              <div class="vehicle-result-1-img-arrow">
+                <img
+                  src="./assets/images/flecha_izq.png"
+                  alt="flecha_izq" /><img
+                  src="./assets/images/flecha_der.png"
+                  alt="flecha_der" />
+              </div>
+              <div class="vehicle-result-1-img-distinctive">
+                <img
+                  src="./assets/images/etiqueta_c.png"
+                  alt="etiqueta ambiental" />
+              </div>
+            </div>
+            <div class="vehicle-result-1-data">
+              <div class="vehicle-result-1-data-header">
+                <a
+                  href="https://www.bymycar.madrid/ficha-vehiculo-ocasion/mini-mini-3-puertas-cooper-100-kw-136-cv/58206429">
+                  <h2>MINI 3 Puertas</h2>
+                  <p>Cooper 100 kW (136 CV)</p>
+                </a>
+              </div>
+              <div class="vehicle-result-1-data-data">
+                <ul>
+                  <li><p>61.299 km</p></li>
+                  <li><p>2020</p></li>
+                  <li><p>Gasolina</p></li>
+                  <li><p>136 CV</p></li>
+                  <li><p>Cambio manual</p></li>
+                </ul>
+                <div>
+                  <p>Precio contado</p>
+                  <p><strong>20.901€</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="vehicle-result-1-contact">
+              <div class="vehicle-result-1-contact-contact">
+                <a href="#">Contactar</a>
+              </div>
+              <div class="vehicle-result-1-contact-phone">
+                <a href="#">Ver teléfono</a>
+              </div>
+            </div>
+          </div>
+          <div class="vehicle-result-1">
+            <div class="vehicle-result-1-img img-2">
+              <div class="vehicle-result-1-img-options">
+                <img src="./assets/images/favoritos.png" alt="favorito" />
+                <img src="./assets/images/comparativa.png" alt="comparar" />
+              </div>
+              <div class="vehicle-result-1-img-arrow">
+                <img
+                  src="./assets/images/flecha_izq.png"
+                  alt="flecha_izq" /><img
+                  src="./assets/images/flecha_der.png"
+                  alt="flecha_der" />
+              </div>
+              <div class="vehicle-result-1-img-distinctive">
+                <img
+                  src="./assets/images/etiqueta_c.png"
+                  alt="etiqueta ambiental" />
+              </div>
+            </div>
+            <div class="vehicle-result-1-data">
+              <div class="vehicle-result-1-data-header">
+                <a
+                  href="https://www.bymycar.madrid/ficha-vehiculo-ocasion/bmw-x1-xdrive20d-140-kw-190-cv/57659694">
+                  <h2>BMW X1</h2>
+                  <p>xDrive20d (90 CV)</p>
+                </a>
+              </div>
+              <div class="vehicle-result-1-data-data">
+                <ul>
+                  <li><p>93.864 km</p></li>
+                  <li><p>2021</p></li>
+                  <li><p>Diésel</p></li>
+                  <li><p>90 CV</p></li>
+                  <li><p>Cambio automático</p></li>
+                </ul>
+                <div>
+                  <p>Precio contado</p>
+                  <p><strong>32.901€</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="vehicle-result-1-contact">
+              <div class="vehicle-result-1-contact-contact">
+                <a href="#">Contactar</a>
+              </div>
+              <div class="vehicle-result-1-contact-phone">
+                <a href="#">Ver teléfono</a>
+              </div>
+            </div>
+          </div>
+          <div class="vehicle-result-1">
+            <div class="vehicle-result-1-img img-3">
+              <div class="vehicle-result-1-img-options">
+                <img src="./assets/images/favoritos.png" alt="favorito" />
+                <img src="./assets/images/comparativa.png" alt="comparar" />
+              </div>
+              <div class="vehicle-result-1-img-arrow">
+                <img
+                  src="./assets/images/flecha_izq.png"
+                  alt="flecha_izq" /><img
+                  src="./assets/images/flecha_der.png"
+                  alt="flecha_der" />
+              </div>
+              <div class="vehicle-result-1-img-distinctive">
+                <img
+                  src="./assets/images/etiqueta_c.png"
+                  alt="etiqueta ambiental" />
+              </div>
+            </div>
+            <div class="vehicle-result-1-data">
+              <div class="vehicle-result-1-data-header">
+                <a
+                  href="https://www.bymycar.madrid/ficha-vehiculo-ocasion/bmw-x2-sdrive20d-140-kw-190-cv/62216256">
+                  <h2>BMW X2</h2>
+                  <p>sDrive20d 140 kW (190 CV)</p>
+                </a>
+              </div>
+              <div class="vehicle-result-1-data-data">
+                <ul>
+                  <li><p>63.966 km</p></li>
+                  <li><p>2021</p></li>
+                  <li><p>Diésel</p></li>
+                  <li><p>190 CV</p></li>
+                  <li><p>Cambio automático</p></li>
+                </ul>
+                <div>
+                  <p>Precio contado</p>
+                  <p><strong>33.501€</strong></p>
+                  <!-- Ajusta el precio si lo conoces -->
+                </div>
+              </div>
+            </div>
+            <div class="vehicle-result-1-contact">
+              <div class="vehicle-result-1-contact-contact">
+                <a href="#">Contactar</a>
+              </div>
+              <div class="vehicle-result-1-contact-phone">
+                <a href="#">Ver teléfono</a>
+              </div>
+            </div>
+          </div>
+          <div class="vehicle-result-1">
+            <div class="vehicle-result-1-img img-4">
+              <div class="vehicle-result-1-img-options">
+                <img src="./assets/images/favoritos.png" alt="favorito" />
+                <img src="./assets/images/comparativa.png" alt="comparar" />
+              </div>
+              <div class="vehicle-result-1-img-arrow">
+                <img
+                  src="./assets/images/flecha_izq.png"
+                  alt="flecha_izq" /><img
+                  src="./assets/images/flecha_der.png"
+                  alt="flecha_der" />
+              </div>
+              <div class="vehicle-result-1-img-distinctive">
+                <img
+                  src="./assets/images/etiqueta_c.png"
+                  alt="etiqueta ambiental" />
+              </div>
+            </div>
+            <div class="vehicle-result-1-data">
+              <div class="vehicle-result-1-data-header">
+                <a
+                  href="https://www.bymycar.madrid/ficha-vehiculo-ocasion/bmw-serie-1-118d-business-110-kw-150-cv/63659487">
+                  <h2>BMW Serie 1</h2>
+                  <p>118d Business 110 kW (150 CV)</p>
+                </a>
+              </div>
+              <div class="vehicle-result-1-data-data">
+                <ul>
+                  <li><p>10.163 km</p></li>
+                  <li><p>2024</p></li>
+                  <li><p>Diésel</p></li>
+                  <li><p>150 CV</p></li>
+                  <li><p>Cambio automático</p></li>
+                </ul>
+                <div>
+                  <p>Precio contado</p>
+                  <p><strong>32.500€</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="vehicle-result-1-contact">
+              <div class="vehicle-result-1-contact-contact">
+                <a href="#">Contactar</a>
+              </div>
+              <div class="vehicle-result-1-contact-phone">
+                <a href="#">Ver teléfono</a>
+              </div>
+            </div>
+          </div>
+          <div class="vehicle-result-1">
+            <div class="vehicle-result-1-img img-5">
+              <div class="vehicle-result-1-img-options">
+                <img src="./assets/images/favoritos.png" alt="favorito" />
+                <img src="./assets/images/comparativa.png" alt="comparar" />
+              </div>
+              <div class="vehicle-result-1-img-arrow">
+                <img
+                  src="./assets/images/flecha_izq.png"
+                  alt="flecha_izq" /><img
+                  src="./assets/images/flecha_der.png"
+                  alt="flecha_der" />
+              </div>
+              <div class="vehicle-result-1-img-distinctive">
+                <img
+                  src="./assets/images/etiqueta_eco.png"
+                  alt="etiqueta ambiental" />
+              </div>
+            </div>
+            <div class="vehicle-result-1-data">
+              <div class="vehicle-result-1-data-header">
+                <a
+                  href="https://www.bymycar.madrid/ficha-vehiculo-ocasion/bmw-serie-3-m340d-xdrive-touring-250-kw-340-cv/64556028">
+                  <h2>BMW Serie 3</h2>
+                  <p>M340d xDrive Touring (340 CV)</p>
+                </a>
+              </div>
+              <div class="vehicle-result-1-data-data">
+                <ul>
+                  <li><p>40.113 km</p></li>
+                  <li><p>2024</p></li>
+                  <li><p>Diésel</p></li>
+                  <li><p>340 CV</p></li>
+                  <li><p>Cambio automático</p></li>
+                </ul>
+                <div>
+                  <p>Precio contado</p>
+                  <p><strong>65.900€</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="vehicle-result-1-contact">
+              <div class="vehicle-result-1-contact-contact">
+                <a href="#">Contactar</a>
+              </div>
+              <div class="vehicle-result-1-contact-phone">
+                <a href="#">Ver teléfono</a>
+              </div>
+            </div>
+          </div>
+          <div class="vehicle-result-1">
+            <div class="vehicle-result-1-img img-6">
+              <div class="vehicle-result-1-img-options">
+                <img src="./assets/images/favoritos.png" alt="favorito" />
+                <img src="./assets/images/comparativa.png" alt="comparar" />
+              </div>
+              <div class="vehicle-result-1-img-arrow">
+                <img
+                  src="./assets/images/flecha_izq.png"
+                  alt="flecha_izq" /><img
+                  src="./assets/images/flecha_der.png"
+                  alt="flecha_der" />
+              </div>
+              <div class="vehicle-result-1-img-distinctive">
+                <img
+                  src="./assets/images/etiqueta_c.png"
+                  alt="etiqueta ambiental" />
+              </div>
+            </div>
+            <div class="vehicle-result-1-data">
+              <div class="vehicle-result-1-data-header">
+                <a
+                  href="https://www.bymycar.madrid/ficha-vehiculo-ocasion/mini-mini-3-puertas-one-d-70-kw-95-cv/57091047">
+                  <h2>MINI 3 Puertas</h2>
+                  <p>One D 70 kW (95 CV)</p>
+                </a>
+              </div>
+              <div class="vehicle-result-1-data-data">
+                <ul>
+                  <li><p>75.221 km</p></li>
+                  <li><p>2019</p></li>
+                  <li><p>Diésel</p></li>
+                  <li><p>95 CV</p></li>
+                  <li><p>Cambio manual</p></li>
+                </ul>
+                <div>
+                  <p>Precio contado</p>
+                  <p><strong>16.901€</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="vehicle-result-1-contact">
+              <div class="vehicle-result-1-contact-contact">
+                <a href="#">Contactar</a>
+              </div>
+              <div class="vehicle-result-1-contact-phone">
+                <a href="#">Ver teléfono</a>
+              </div>
+            </div>
+          </div>
+          <div class="vehicle-result-1">
+            <div class="vehicle-result-1-img img-7">
+              <div class="vehicle-result-1-img-options">
+                <img src="./assets/images/favoritos.png" alt="favorito" />
+                <img src="./assets/images/comparativa.png" alt="comparar" />
+              </div>
+              <div class="vehicle-result-1-img-arrow">
+                <img
+                  src="./assets/images/flecha_izq.png"
+                  alt="flecha_izq" /><img
+                  src="./assets/images/flecha_der.png"
+                  alt="flecha_der" />
+              </div>
+              <div class="vehicle-result-1-img-distinctive">
+                <img
+                  src="./assets/images/etiqueta_c.png"
+                  alt="etiqueta ambiental" />
+              </div>
+            </div>
+            <div class="vehicle-result-1-data">
+              <div class="vehicle-result-1-data-header">
+                <a
+                  href="https://www.bymycar.madrid/ficha-vehiculo-ocasion/mini-mini-cabrio-john-cooper-works-170-kw-231-cv/66268714">
+                  <h2>MINI Cabrio</h2>
+                  <p>John Cooper Works (231 CV)</p>
+                </a>
+              </div>
+              <div class="vehicle-result-1-data-data">
+                <ul>
+                  <li><p>17.271 km</p></li>
+                  <li><p>2024</p></li>
+                  <li><p>Gasolina</p></li>
+                  <li><p>231 CV</p></li>
+                  <li><p>Cambio automático</p></li>
+                </ul>
+                <div>
+                  <p>Precio contado</p>
+                  <p><strong>40.900€</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="vehicle-result-1-contact">
+              <div class="vehicle-result-1-contact-contact">
+                <a href="#">Contactar</a>
+              </div>
+              <div class="vehicle-result-1-contact-phone">
+                <a href="#">Ver teléfono</a>
+              </div>
+            </div>
+          </div>
+          <div class="vehicle-result-1">
+            <div class="vehicle-result-1-img img-8">
+              <div class="vehicle-result-1-img-options">
+                <img src="./assets/images/favoritos.png" alt="favorito" />
+                <img src="./assets/images/comparativa.png" alt="comparar" />
+              </div>
+              <div class="vehicle-result-1-img-arrow">
+                <img
+                  src="./assets/images/flecha_izq.png"
+                  alt="flecha_izq" /><img
+                  src="./assets/images/flecha_der.png"
+                  alt="flecha_der" />
+              </div>
+              <div class="vehicle-result-1-img-distinctive">
+                <img
+                  src="./assets/images/etiqueta_c.png"
+                  alt="etiqueta ambiental" />
+              </div>
+            </div>
+            <div class="vehicle-result-1-data">
+              <div class="vehicle-result-1-data-header">
+                <a
+                  href="https://www.bymycar.madrid/ficha-vehiculo-ocasion/mini-mini-3-puertas-cooper-100-kw-136-cv/58206429">
+                  <h2>MINI 3 Puertas</h2>
+                  <p>Cooper 100 kW (136 CV)</p>
+                </a>
+              </div>
+              <div class="vehicle-result-1-data-data">
+                <ul>
+                  <li><p>61.299 km</p></li>
+                  <li><p>2020</p></li>
+                  <li><p>Gasolina</p></li>
+                  <li><p>136 CV</p></li>
+                  <li><p>Cambio manual</p></li>
+                </ul>
+                <div>
+                  <p>Precio contado</p>
+                  <p><strong>20.901€</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="vehicle-result-1-contact">
+              <div class="vehicle-result-1-contact-contact">
+                <a href="#">Contactar</a>
+              </div>
+              <div class="vehicle-result-1-contact-phone">
+                <a href="#">Ver teléfono</a>
+              </div>
+            </div>
+          </div>
+          <div class="vehicle-result-1">
+            <div class="vehicle-result-1-img img-9">
+              <div class="vehicle-result-1-img-options">
+                <img src="./assets/images/favoritos.png" alt="favorito" />
+                <img src="./assets/images/comparativa.png" alt="comparar" />
+              </div>
+              <div class="vehicle-result-1-img-arrow">
+                <img
+                  src="./assets/images/flecha_izq.png"
+                  alt="flecha_izq" /><img
+                  src="./assets/images/flecha_der.png"
+                  alt="flecha_der" />
+              </div>
+              <div class="vehicle-result-1-img-distinctive">
+                <img
+                  src="./assets/images/etiqueta_c.png"
+                  alt="etiqueta ambiental" />
+              </div>
+            </div>
+            <div class="vehicle-result-1-data">
+              <div class="vehicle-result-1-data-header">
+                <a
+                  href="https://www.bymycar.madrid/ficha-vehiculo-ocasion/mercedes-benz-clase-a-180-100-kw-136-cv/64484055">
+                  <h2>Mercedes Clase A</h2>
+                  <p>180 100 kW (136 CV)</p>
+                </a>
+              </div>
+              <div class="vehicle-result-1-data-data">
+                <ul>
+                  <li><p>89.000 km</p></li>
+                  <li><p>2018</p></li>
+                  <li><p>Gasolina</p></li>
+                  <li><p>136 CV</p></li>
+                  <li><p>Cambio automático</p></li>
+                </ul>
+                <div>
+                  <p>Precio contado</p>
+                  <p><strong>22.900€</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="vehicle-result-1-contact">
+              <div class="vehicle-result-1-contact-contact">
+                <a href="#">Contactar</a>
+              </div>
+              <div class="vehicle-result-1-contact-phone">
+                <a href="#">Ver teléfono</a>
+              </div>
+            </div>
+          </div>
+          <div class="vehicle-result-1">
+            <div class="vehicle-result-1-img img-10">
+              <div class="vehicle-result-1-img-options">
+                <img src="./assets/images/favoritos.png" alt="favorito" />
+                <img src="./assets/images/comparativa.png" alt="comparar" />
+              </div>
+              <div class="vehicle-result-1-img-arrow">
+                <img
+                  src="./assets/images/flecha_izq.png"
+                  alt="flecha_izq" /><img
+                  src="./assets/images/flecha_der.png"
+                  alt="flecha_der" />
+              </div>
+              <div class="vehicle-result-1-img-distinctive">
+                <img
+                  src="./assets/images/etiqueta_c.png"
+                  alt="etiqueta ambiental" />
+              </div>
+            </div>
+            <div class="vehicle-result-1-data">
+              <div class="vehicle-result-1-data-header">
+                <a
+                  href="https://www.bymycar.madrid/ficha-vehiculo-ocasion/bmw-serie-2-218d-gran-coupe-110-kw-150-cv/57349347">
+                  <h2>BMW Serie 2</h2>
+                  <p>218d Gran Coupe 110 kW (150 CV)</p>
+                </a>
+              </div>
+              <div class="vehicle-result-1-data-data">
+                <ul>
+                  <li><p>87.898 km</p></li>
+                  <li><p>2021</p></li>
+                  <li><p>Diésel</p></li>
+                  <li><p>150 CV</p></li>
+                  <li><p>Cambio automático</p></li>
+                </ul>
+                <div>
+                  <p>Precio contado</p>
+                  <p><strong>32.901€</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="vehicle-result-1-contact">
+              <div class="vehicle-result-1-contact-contact">
+                <a href="#">Contactar</a>
+              </div>
+              <div class="vehicle-result-1-contact-phone">
+                <a href="#">Ver teléfono</a>
+              </div>
+            </div>
+          </div>
+          <div class="vehicle-result-1">
+            <div class="vehicle-result-1-img img-11">
+              <div class="vehicle-result-1-img-options">
+                <img src="./assets/images/favoritos.png" alt="favorito" />
+                <img src="./assets/images/comparativa.png" alt="comparar" />
+              </div>
+              <div class="vehicle-result-1-img-arrow">
+                <img
+                  src="./assets/images/flecha_izq.png"
+                  alt="flecha_izq" /><img
+                  src="./assets/images/flecha_der.png"
+                  alt="flecha_der" />
+              </div>
+              <div class="vehicle-result-1-img-distinctive">
+                <img
+                  src="./assets/images/etiqueta_c.png"
+                  alt="etiqueta ambiental" />
+              </div>
+            </div>
+            <div class="vehicle-result-1-data">
+              <div class="vehicle-result-1-data-header">
+                <a
+                  href="https://www.bymycar.madrid/ficha-vehiculo-ocasion/bmw-x1-xdrive20d-140-kw-190-cv/57659694">
+                  <h2>BMW X1</h2>
+                  <p>xDrive20d 140 kW (190 CV)</p>
+                </a>
+              </div>
+              <div class="vehicle-result-1-data-data">
+                <ul>
+                  <li><p>93.864 km</p></li>
+                  <li><p>2021</p></li>
+                  <li><p>Diésel</p></li>
+                  <li><p>190 CV</p></li>
+                  <li><p>Cambio automático</p></li>
+                </ul>
+                <div>
+                  <p>Precio contado</p>
+                  <p><strong>32.901€</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="vehicle-result-1-contact">
+              <div class="vehicle-result-1-contact-contact">
+                <a href="#">Contactar</a>
+              </div>
+              <div class="vehicle-result-1-contact-phone">
+                <a href="#">Ver teléfono</a>
+              </div>
+            </div>
+          </div>
+          <div class="vehicle-result-1">
+            <div class="vehicle-result-1-img img-12">
+              <div class="vehicle-result-1-img-options">
+                <img src="./assets/images/favoritos.png" alt="favorito" />
+                <img src="./assets/images/comparativa.png" alt="comparar" />
+              </div>
+              <div class="vehicle-result-1-img-arrow">
+                <img
+                  src="./assets/images/flecha_izq.png"
+                  alt="flecha_izq" /><img
+                  src="./assets/images/flecha_der.png"
+                  alt="flecha_der" />
+              </div>
+              <div class="vehicle-result-1-img-distinctive">
+                <img
+                  src="./assets/images/etiqueta_c.png"
+                  alt="etiqueta ambiental" />
+              </div>
+            </div>
+            <div class="vehicle-result-1-data">
+              <div class="vehicle-result-1-data-header">
+                <a
+                  href="https://www.bymycar.madrid/ficha-vehiculo-ocasion/bmw-x2-sdrive20d-140-kw-190-cv/62216256">
+                  <h2>BMW X2</h2>
+                  <p>sDrive20d 140 kW (190 CV)</p>
+                </a>
+              </div>
+              <div class="vehicle-result-1-data-data">
+                <ul>
+                  <li><p>63.966 km</p></li>
+                  <li><p>2021</p></li>
+                  <li><p>Diésel</p></li>
+                  <li><p>190 CV</p></li>
+                  <li><p>Cambio automático</p></li>
+                </ul>
+                <div>
+                  <p>Precio contado</p>
+                  <p><strong>33.501€</strong></p>
+                  <!-- Ajusta el precio si lo conoces -->
+                </div>
+              </div>
+            </div>
+            <div class="vehicle-result-1-contact">
+              <div class="vehicle-result-1-contact-contact">
+                <a href="#">Contactar</a>
+              </div>
+              <div class="vehicle-result-1-contact-phone">
+                <a href="#">Ver teléfono</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <aside>
       <ul>
-        <li><a href="tel:+34666666677">666 66 66 77</a></li>
-        <li><a href="/cita-taller/">Taller</a></li>
-        <li><a href="/contacto/">Contactar</a></li>
-        <li><a href="/ubicaciones-y-horarios/">Ubicaciones</a></li>
+        <li>
+          <img src="./assets/images/telefono_blanco.png" /><a
+            href="tel:+34666666677"
+            >666 66 66 77</a
+          >
+        </li>
+        <li>
+          <img src="./assets/images/calendario_blanco2.png" /><a
+            href="/cita-taller/"
+            >Taller</a
+          >
+        </li>
+        <li>
+          <img src="./assets/images/mail_blanco.png" /><a href="/contacto/"
+            >Contactar</a
+          >
+        </li>
+        <li>
+          <img src="./assets/images/ubicacion_blanco.png" /><a
+            href="/ubicaciones-y-horarios/"
+            >Ubicaciones</a
+          >
+        </li>
       </ul>
     </aside>
 
     <footer>
-      <section>
-        <h2>Coches</h2>
-        <ul>
-          <li>
-            <a href="https://www.bymycar.madrid/coches-ocasion/bmw/"
-              >BMW de ocasión</a
-            >
-          </li>
-          <li>
-            <a href="https://www.bymycar.madrid/coches-ocasion/mini/"
-              >MINI de ocasión</a
-            >
-          </li>
-          <li>
-            <a href="https://www.bymycar.madrid/coches-nuevos/bmw/"
-              >BMW nuevos</a
-            >
-          </li>
-          <li>
-            <a href="https://www.bymycar.madrid/coches-nuevos/mini/"
-              >MINI nuevos</a
-            >
-          </li>
-        </ul>
-      </section>
+      <div class="first-footer">
+        <section>
+          <h2>Coches</h2>
+          <ul>
+            <li>
+              <a href="https://www.bymycar.madrid/coches-ocasion/bmw/"
+                >BMW de ocasión</a
+              >
+            </li>
+            <li>
+              <a href="https://www.bymycar.madrid/coches-ocasion/mini/"
+                >MINI de ocasión</a
+              >
+            </li>
+            <li>
+              <a href="https://www.bymycar.madrid/coches-nuevos/bmw/"
+                >BMW nuevos</a
+              >
+            </li>
+            <li>
+              <a href="https://www.bymycar.madrid/coches-nuevos/mini/"
+                >MINI nuevos</a
+              >
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>Motos</h2>
-        <ul>
-          <li>
-            <a href="https://www.bymycar.madrid/motos-ocasion/"
-              >Motorrad de ocasión</a
+        <section>
+          <h2>Motos</h2>
+          <ul>
+            <li>
+              <a href="https://www.bymycar.madrid/motos-ocasion/"
+                >Motorrad de ocasión</a
+              >
+            </li>
+            <li>
+              <a href="https://www.bymycar.madrid/motos-nuevas/"
+                >Motorrad nuevas</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Renting</h2>
+          <ul>
+            <li>
+              <a href="https://www.bymycar.madrid/bmw-renting/">Renting BMW</a>
+            </li>
+            <li>
+              <a href="https://www.bymycar.madrid/mini-renting/"
+                >Renting MINI</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Nosotros</h2>
+          <ul>
+            <li><a href="/quienes-somos/">Quiénes somos</a></li>
+            <li>
+              <a href="/ubicaciones-y-horarios/">Ubicaciones y horarios</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="first-footer-contact">
+          <h2>Contacta con nosotros</h2>
+          <p>
+            <a href="tel:+34913351900" class="first-footer-contact-phone"
+              >913 351 900</a
             >
-          </li>
-          <li>
-            <a href="https://www.bymycar.madrid/motos-nuevas/"
-              >Motorrad nuevas</a
-            >
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Renting</h2>
-        <ul>
-          <li>
-            <a href="https://www.bymycar.madrid/bmw-renting/">Renting BMW</a>
-          </li>
-          <li>
-            <a href="https://www.bymycar.madrid/mini-renting/">Renting MINI</a>
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Nosotros</h2>
-        <ul>
-          <li><a href="/quienes-somos/">Quiénes somos</a></li>
-          <li><a href="/ubicaciones-y-horarios/">Ubicaciones y horarios</a></li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Contacta con nosotros</h2>
-        <p><a href="tel:+34913351900">913 351 900</a></p>
-        <p><a href="mailto:bmw.madrid@bymycar.es">bmw.madrid@bymycar.es</a></p>
-      </section>
-
-      <section>
-        <h2>Redes Sociales</h2>
-        <ul>
-          <li>
+          </p>
+          <p>
             <a
-              href="https://www.instagram.com/bmw.bymycar.madrid/"
-              target="_blank"
-              >Instagram BMW</a
+              href="mailto:bmw.madrid@bymycar.es"
+              class="first-footer-contact-mail"
+              >bmw.madrid@bymycar.es</a
             >
-          </li>
-          <li>
+          </p>
+          <p class="first-footer-contact-rrss">
+            <a href="https://www.instagram.com/bmw.bymycar.madrid/"
+              ><img src="./assets/images/instagram.png"
+            /></a>
             <a href="https://www.facebook.com/BMWBymycarMadrid" target="_blank"
-              >Facebook BMW</a
-            >
-          </li>
-          <li>
+              ><img src="./assets/images/facebook.png"
+            /></a>
             <a
               href="https://www.linkedin.com/company/bymycarmadrid/"
               target="_blank"
-              >LinkedIn</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/mini.bymycar.madrid/"
-              target="_blank"
-              >Instagram MINI</a
-            >
-          </li>
-          <li>
-            <a href="https://www.facebook.com/MINIBymycarMadrid" target="_blank"
-              >Facebook MINI</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/bmwmotorrad.bymycar.madrid/"
-              target="_blank"
-              >Instagram Motorrad</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com/BMWMotorradBymycarMadrid"
-              target="_blank"
-              >Facebook Motorrad</a
-            >
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Legal</h2>
+              ><img src="./assets/images/linkedln.png"
+            /></a>
+          </p>
+        </section>
+      </div>
+      <div class="second-footer">
         <ul>
           <li><a href="/aviso-legal/">Aviso legal</a></li>
           <li><a href="/politica-privacidad/">Política Privacidad</a></li>
           <li><a href="/politica-cookies/">Política de Cookies</a></li>
           <li><a href="/politica-integrada/">Política integrada</a></li>
         </ul>
-      </section>
+      </div>
     </footer>
   </body>
 </html>
