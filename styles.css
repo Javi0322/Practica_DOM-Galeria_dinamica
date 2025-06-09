@@ -473,10 +473,14 @@ aside ul li img {
   min-width: 100%;
   margin-left: var(--spacing-xxlarge);
   border: 0.5px solid var(--color-border);
-  height: 440px;
+  height: 100%;
   max-width: 200px;
   margin-bottom: var(--spacing-xxlarge);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 .vehicle-result-1-img {
   display: grid;
   grid-template-columns: 1fr;
@@ -489,53 +493,23 @@ aside ul li img {
   max-height: 200px;
   min-height: 200px;
 }
-
-.img-1 {
-  background-image: url(https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_anuncios%2F00%2F05%2F82%2F06%2F42%2F9%2Fx01.jpg%3F14735047983&size=700&format=webp);
+.vehicle-result-1-img {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 200px;
+  min-height: 200px;
+  overflow: hidden;
+  transition: background-size 0.3s ease;
 }
 
-.img-2 {
-  background-image: url(https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_anuncios%2F00%2F05%2F76%2F59%2F69%2F4%2Fx01.jpg%3F14752710225&size=700&format=webp);
-}
-
-.img-3 {
-  background-image: url(https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_anuncios%2F00%2F06%2F22%2F16%2F25%2F6%2Fx01.jpg%3F14760696289&size=700&format=webp);
-}
-
-.img-4 {
-  background-image: url(https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_anuncios%2F00%2F06%2F36%2F59%2F48%2F7%2Fx01.jpg%3F14752964208&size=700&format=webp);
-}
-
-.img-5 {
-  background-image: url(https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_anuncios%2F00%2F06%2F45%2F56%2F02%2F8%2Fx01.jpg%3F14758748079&size=700&format=webp);
-}
-
-.img-6 {
-  background-image: url(https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_anuncios%2F00%2F05%2F70%2F91%2F04%2F7%2Fx01.jpg%3F14708053662&size=700&format=webp);
-}
-
-.img-7 {
-  background-image: url(https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_anuncios%2F00%2F06%2F62%2F68%2F71%2F4%2Fx01.jpg%3F14765147290&size=700&format=webp);
-}
-
-.img-8 {
-  background-image: url(https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_anuncios%2F00%2F05%2F82%2F06%2F42%2F9%2Fx01.jpg%3F14735047983&size=700&format=webp);
-}
-
-.img-9 {
-  background-image: url(https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_anuncios%2F00%2F06%2F44%2F84%2F05%2F5%2Fg01.jpg%3F14743350891&size=700&format=webp);
-}
-
-.img-10 {
-  background-image: url(https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_anuncios%2F00%2F05%2F73%2F49%2F34%2F7%2Fx01.jpg%3F14706758796&size=700&format=webp);
-}
-
-.img-11 {
-  background-image: url(https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_anuncios%2F00%2F05%2F76%2F59%2F69%2F4%2Fx01.jpg%3F14752710225&size=700&format=webp);
-}
-
-.img-12 {
-  background-image: url(https://images.motorflash.com/filter?path=https%3A%2F%2Ffotos.estaticosmf.com%2Ffotos_anuncios%2F00%2F06%2F22%2F16%2F25%2F6%2Fx01.jpg%3F14760696289&size=700&format=webp);
+.vehicle-result-1-img:hover {
+  background-size: 115%;
 }
 
 .vehicle-result-1-img-options {
@@ -828,6 +802,31 @@ aside ul li img {
   aside {
     display: none;
   }
+}
+
+.ver-mas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  padding-bottom: 40px;
+  grid-column: 1 / -1; /* en caso de que lo uses dentro de un grid, que ocupe todo */
+}
+
+#ver-mas {
+  padding: 12px 32px;
+  background-color: #004aad;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#ver-mas:hover {
+  background-color: #003380;
 }
 
 /*---------------------------------------------------------------------------*/
