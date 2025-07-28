@@ -351,7 +351,7 @@ function actualizarFiltros() {
     )
   }
 
-  // Actualizar opciones de marca
+  // Actualizar marca
   const marcasDisponibles = new Set()
   totalCoches
     .filter((coche) => {
@@ -367,7 +367,7 @@ function actualizarFiltros() {
     })
     .forEach((coche) => marcasDisponibles.add(coche.marca))
 
-  // Guardar selección actual de marca
+  // Guardar  marca
   const marcaActual = marcaSelect.value
 
   // Actualizar select de marca
@@ -378,7 +378,7 @@ function actualizarFiltros() {
       marcaSelect.innerHTML += `<option value="${marca}">${marca}</option>`
     })
 
-  // Restaurar selección de marca si sigue disponible
+  // Restaurar marca si sigue disponible
   if (
     marcaActual !== '-1' &&
     Array.from(marcasDisponibles).includes(marcaActual)
@@ -407,7 +407,7 @@ function actualizarFiltros() {
       modelosPorMarca[coche.marca].add(coche.modelo)
     })
 
-  // Guardar selección actual de modelo
+  // Guardar modelo
   const modeloActual = modeloSelect.value
 
   // Actualizar select de modelo
@@ -430,7 +430,7 @@ function actualizarFiltros() {
       modeloSelect.appendChild(optgroup)
     })
 
-  // Restaurar selección de modelo si sigue disponible
+  // Restaurar modelo si sigue disponible
   if (modeloActual !== '-1') {
     const options = modeloSelect.querySelectorAll('option')
     options.forEach((option) => {
@@ -466,7 +466,7 @@ function actualizarFiltros() {
       carroceriaSelect.innerHTML += `<option value="${carroceria}">${carroceria}</option>`
     })
 
-  // Restaurar selección de carrocería si sigue disponible
+  // Restaurar carrocería si sigue disponible
   if (
     carroceriaActual !== '-1' &&
     Array.from(carroceriasDisponibles).includes(carroceriaActual)
@@ -503,7 +503,7 @@ function actualizarFiltros() {
       colorSelect.innerHTML += `<option value="${color}">${color}</option>`
     })
 
-  // Restaurar la selección de color si sigue disponible
+  // Restaurar color si sigue disponible
   if (
     colorActual !== '-1' &&
     Array.from(coloresDisponibles).includes(colorActual)
