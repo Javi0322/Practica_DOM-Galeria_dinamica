@@ -18,7 +18,7 @@ function crearHTMLCoche(coche) {
           <img src="./assets/images/flecha_der.png" alt="flecha_der" />
         </div>
         <div class="vehicle-result-1-img-distinctive">
-          <img src="./assets/images/etiqueta_c.png" alt="etiqueta ambiental" />
+          <img src="./assets/images/etiqueta_${coche.distintivo}.png" alt="etiqueta ambiental" />
         </div>
       </div>
       <div class="vehicle-result-1-data">
