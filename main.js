@@ -44,10 +44,10 @@ function crearHTMLCoche(coche) {
       </div>
       <div class="vehicle-result-1-contact">
         <div class="vehicle-result-1-contact-contact">
-          <a href="#">Contactar</a>
+          <a href="https://www.bymycar.madrid/ficha-contacto/vehiculo/${coche.motorflashID}">Contactar</a>
         </div>
         <div class="vehicle-result-1-contact-phone">
-          <a href="#">Ver teléfono</a>
+          <a href="tel:666666677">Llamar</a>
         </div>
       </div>
     </div>
@@ -135,7 +135,8 @@ fetch('./stock1.xml')
         distintivo: v.getElementsByTagName('distintivo')[0]?.textContent ?? '',
         carroceria,
         url: `https://www.bymycar.madrid/ficha-vehiculo-ocasion/${carroceria}/${motorflashID}`,
-        foto: v.getElementsByTagName('foto')[0]?.textContent ?? ''
+        foto: v.getElementsByTagName('foto')[0]?.textContent ?? '',
+        motorflashID: motorflashID
       })
     }
 
@@ -272,54 +273,7 @@ function ordenarCoches(criterio) {
   }
 }
 
-const marcaSelect = document.getElementById('marcaListado')
-const modeloSelect = document.getElementById('modeloListado')
-
 let cochesFiltrados = []
-
-function actualizarOpcionesModelo(marcaSeleccionada) {
-  modeloSelect.innerHTML = '<option value="-1">Modelo</option>'
-
-  if (marcaSeleccionada === '-1') {
-    const marcasModelos = {}
-    totalCoches.forEach((coche) => {
-      if (!marcasModelos[coche.marca]) marcasModelos[coche.marca] = new Set()
-      marcasModelos[coche.marca].add(coche.modelo)
-    })
-
-    Object.entries(marcasModelos)
-      .sort()
-      .forEach(([marca, modelos]) => {
-        const optgroup = document.createElement('optgroup')
-        optgroup.label = marca
-        Array.from(modelos)
-          .sort()
-          .forEach((modelo) => {
-            const opt = document.createElement('option')
-            opt.value = modelo
-            opt.textContent = modelo
-            optgroup.appendChild(opt)
-          })
-        modeloSelect.appendChild(optgroup)
-      })
-  } else {
-    const modelosUnicos = new Set()
-    totalCoches.forEach((coche) => {
-      if (coche.marca === marcaSeleccionada) {
-        modelosUnicos.add(coche.modelo)
-      }
-    })
-
-    Array.from(modelosUnicos)
-      .sort()
-      .forEach((modelo) => {
-        const opt = document.createElement('option')
-        opt.value = modelo
-        opt.textContent = modelo
-        modeloSelect.appendChild(opt)
-      })
-  }
-}
 
 function filtrarCoches() {
   const marcaSeleccionada = marcaSelect.value
@@ -358,23 +312,220 @@ function renderizarFiltrados() {
   verMasBtn.style.display = fin < origen.length ? 'block' : 'none'
 }
 
-marcaSelect.addEventListener('change', () => {
-  actualizarOpcionesModelo(marcaSelect.value)
-  modeloSelect.value = '-1'
-  filtrarCoches()
-})
+function actualizarFiltros() {
+  const marcaSelect = document.getElementById('marcaListado')
+  const modeloSelect = document.getElementById('modeloListado')
+  const carroceriaSelect = document.getElementById('carroceriaListado')
+  const colorSelect = document.getElementById('colorListado')
 
-modeloSelect.addEventListener('change', () => {
+  const marcaSeleccionada = marcaSelect.value
   const modeloSeleccionado = modeloSelect.value
+  const carroceriaSeleccionada = carroceriaSelect.value
+  const colorSeleccionado = colorSelect.value
+
+  // Comenzamos con todos los coches
+  let cochesFiltrados = totalCoches
+
+  // Aplicamos los filtros existentes
+  if (marcaSeleccionada !== '-1') {
+    cochesFiltrados = cochesFiltrados.filter(
+      (coche) => coche.marca === marcaSeleccionada
+    )
+  }
+
   if (modeloSeleccionado !== '-1') {
-    const cocheConModelo = totalCoches.find(
+    cochesFiltrados = cochesFiltrados.filter(
       (coche) => coche.modelo === modeloSeleccionado
     )
-    if (cocheConModelo) {
-      marcaSelect.value = cocheConModelo.marca
-      actualizarOpcionesModelo(cocheConModelo.marca)
-      modeloSelect.value = modeloSeleccionado
-    }
   }
-  filtrarCoches()
-})
+
+  if (carroceriaSeleccionada !== '-1') {
+    cochesFiltrados = cochesFiltrados.filter(
+      (coche) => coche.carroceria === carroceriaSeleccionada
+    )
+  }
+
+  if (colorSeleccionado !== '-1') {
+    cochesFiltrados = cochesFiltrados.filter(
+      (coche) => coche.color === colorSeleccionado
+    )
+  }
+
+  // Actualizar opciones de marca
+  const marcasDisponibles = new Set()
+  totalCoches
+    .filter((coche) => {
+      let cumpleFiltros = true
+      if (modeloSeleccionado !== '-1')
+        cumpleFiltros = cumpleFiltros && coche.modelo === modeloSeleccionado
+      if (carroceriaSeleccionada !== '-1')
+        cumpleFiltros =
+          cumpleFiltros && coche.carroceria === carroceriaSeleccionada
+      if (colorSeleccionado !== '-1')
+        cumpleFiltros = cumpleFiltros && coche.color === colorSeleccionado
+      return cumpleFiltros
+    })
+    .forEach((coche) => marcasDisponibles.add(coche.marca))
+
+  // Guardar selección actual de marca
+  const marcaActual = marcaSelect.value
+
+  // Actualizar select de marca
+  marcaSelect.innerHTML = '<option value="-1">Marca</option>'
+  Array.from(marcasDisponibles)
+    .sort()
+    .forEach((marca) => {
+      marcaSelect.innerHTML += `<option value="${marca}">${marca}</option>`
+    })
+
+  // Restaurar selección de marca si sigue disponible
+  if (
+    marcaActual !== '-1' &&
+    Array.from(marcasDisponibles).includes(marcaActual)
+  ) {
+    marcaSelect.value = marcaActual
+  }
+
+  // Actualizar opciones de modelo
+  const modelosPorMarca = {}
+  totalCoches
+    .filter((coche) => {
+      let cumpleFiltros = true
+      if (marcaSeleccionada !== '-1')
+        cumpleFiltros = cumpleFiltros && coche.marca === marcaSeleccionada
+      if (carroceriaSeleccionada !== '-1')
+        cumpleFiltros =
+          cumpleFiltros && coche.carroceria === carroceriaSeleccionada
+      if (colorSeleccionado !== '-1')
+        cumpleFiltros = cumpleFiltros && coche.color === colorSeleccionado
+      return cumpleFiltros
+    })
+    .forEach((coche) => {
+      if (!modelosPorMarca[coche.marca]) {
+        modelosPorMarca[coche.marca] = new Set()
+      }
+      modelosPorMarca[coche.marca].add(coche.modelo)
+    })
+
+  // Guardar selección actual de modelo
+  const modeloActual = modeloSelect.value
+
+  // Actualizar select de modelo
+  modeloSelect.innerHTML = '<option value="-1">Modelo</option>'
+  Object.keys(modelosPorMarca)
+    .sort()
+    .forEach((marca) => {
+      const optgroup = document.createElement('optgroup')
+      optgroup.label = marca
+
+      Array.from(modelosPorMarca[marca])
+        .sort()
+        .forEach((modelo) => {
+          const option = document.createElement('option')
+          option.value = modelo
+          option.textContent = modelo
+          optgroup.appendChild(option)
+        })
+
+      modeloSelect.appendChild(optgroup)
+    })
+
+  // Restaurar selección de modelo si sigue disponible
+  if (modeloActual !== '-1') {
+    const options = modeloSelect.querySelectorAll('option')
+    options.forEach((option) => {
+      if (option.value === modeloActual) {
+        option.selected = true
+      }
+    })
+  }
+
+  // Actualizar opciones de carrocería
+  const carroceriasDisponibles = new Set()
+  totalCoches
+    .filter((coche) => {
+      let cumpleFiltros = true
+      if (marcaSeleccionada !== '-1')
+        cumpleFiltros = cumpleFiltros && coche.marca === marcaSeleccionada
+      if (modeloSeleccionado !== '-1')
+        cumpleFiltros = cumpleFiltros && coche.modelo === modeloSeleccionado
+      if (colorSeleccionado !== '-1')
+        cumpleFiltros = cumpleFiltros && coche.color === colorSeleccionado
+      return cumpleFiltros
+    })
+    .forEach((coche) => carroceriasDisponibles.add(coche.carroceria))
+
+  // Guardar selección actual de carrocería
+  const carroceriaActual = carroceriaSelect.value
+
+  // Actualizar select de carrocería
+  carroceriaSelect.innerHTML = '<option value="-1">Carrocería</option>'
+  Array.from(carroceriasDisponibles)
+    .sort()
+    .forEach((carroceria) => {
+      carroceriaSelect.innerHTML += `<option value="${carroceria}">${carroceria}</option>`
+    })
+
+  // Restaurar selección de carrocería si sigue disponible
+  if (
+    carroceriaActual !== '-1' &&
+    Array.from(carroceriasDisponibles).includes(carroceriaActual)
+  ) {
+    carroceriaSelect.value = carroceriaActual
+  }
+
+  // Actualizar las opciones disponibles del select de color
+  const coloresDisponibles = new Set()
+  totalCoches
+    .filter((coche) => {
+      // Aplicar todos los filtros EXCEPTO el de color
+      let cumpleFiltros = true
+      if (marcaSeleccionada !== '-1')
+        cumpleFiltros = cumpleFiltros && coche.marca === marcaSeleccionada
+      if (modeloSeleccionado !== '-1')
+        cumpleFiltros = cumpleFiltros && coche.modelo === modeloSeleccionado
+      if (carroceriaSeleccionada !== '-1')
+        cumpleFiltros =
+          cumpleFiltros && coche.carroceria === carroceriaSeleccionada
+
+      return cumpleFiltros
+    })
+    .forEach((coche) => coloresDisponibles.add(coche.color))
+
+  //Guardar la selección actual de color
+  const colorActual = colorSelect.value
+
+  //Actualizar el select de color
+  colorSelect.innerHTML = '<option value="-1">Color</option>'
+  Array.from(coloresDisponibles)
+    .sort()
+    .forEach((color) => {
+      colorSelect.innerHTML += `<option value="${color}">${color}</option>`
+    })
+
+  // Restaurar la selección de color si sigue disponible
+  if (
+    colorActual !== '-1' &&
+    Array.from(coloresDisponibles).includes(colorActual)
+  ) {
+    colorSelect.value = colorActual
+  }
+
+  // Actualizar la lista de coches mostrados
+  cochesAMostrarGlobal = cochesFiltrados
+  paginaActual = 0
+  renderizarCoches()
+}
+
+document
+  .getElementById('marcaListado')
+  .addEventListener('change', actualizarFiltros)
+document
+  .getElementById('modeloListado')
+  .addEventListener('change', actualizarFiltros)
+document
+  .getElementById('carroceriaListado')
+  .addEventListener('change', actualizarFiltros)
+document
+  .getElementById('colorListado')
+  .addEventListener('change', actualizarFiltros)
