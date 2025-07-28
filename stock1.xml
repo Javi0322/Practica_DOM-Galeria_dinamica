@@ -1,6 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <motorflash>
 <anuncio>
+<motorflashID>45478222</motorflashID>
+<dealerID>238</dealerID>
+<instalacion><![CDATA[BYmyCAR Madrid - Alcalá]]></instalacion>
+<mail>manuel.ortuno@bymycar.es</mail>
+<matricula>7084MFS</matricula>
+<chasis>WB10C5101P6G90657</chasis>
+<marca><![CDATA[BMW Motorrad]]></marca>
+<modelo><![CDATA[CE 04]]></modelo>
+<version><![CDATA[]]></version>
+<compraDMS>2024-01-25</compraDMS>
+<c02>N.D.</c02>
+<usoAnterior>Demostración</usoAnterior>
+<videos></videos>
+<carroceria>Moto</carroceria>
+<estado>usado</estado>
+<disponible>DISPONIBLE</disponible>
+<precio>7000</precio>
+<precio_nuevo>12972</precio_nuevo>
+<precio_profesional></precio_profesional>
+<puertas></puertas>
+<cambio>Cambio automático</cambio>
+<ancho>N.D.</ancho>
+<largo>N.D.</largo>
+<alto>N.D.</alto>
+<maletero></maletero>
+<deposito></deposito>
+<aceleracion>N.D.</aceleracion>
+<velocidadMax>N.D.</velocidadMax>
+<peso></peso>
+<marchas></marchas>
+<kilometros>9391</kilometros>
+<combustible>Eléctrico</combustible>
+<potencia>41.00</potencia>
+<garantia>36</garantia>
+<iva_deducible>true</iva_deducible>
+<plazas>2</plazas>
+<traccion>N.D.</traccion>
+<fechaMatriculacion>24 / 03 / 2023</fechaMatriculacion>
+<fotos>
+<foto><![CDATA[https://fotos.estaticosmf.com/fotos_anuncios/00/04/54/78/22/2/g01.jpg?14841524323]]></foto>
+<foto><![CDATA[https://fotos.estaticosmf.com/fotos_anuncios/00/04/54/78/22/2/g02.jpg?14841524341]]></foto>
+<foto><![CDATA[https://fotos.estaticosmf.com/fotos_anuncios/00/04/54/78/22/2/g03.jpg?14841524350]]></foto>
+<foto><![CDATA[https://fotos.estaticosmf.com/fotos_anuncios/00/04/54/78/22/2/g04.jpg?14841524359]]></foto>
+<foto><![CDATA[https://fotos.estaticosmf.com/fotos_anuncios/00/04/54/78/22/2/g05.jpg?14841524368]]></foto>
+<foto><![CDATA[https://fotos.estaticosmf.com/fotos_anuncios/00/04/54/78/22/2/g06.jpg?14841524377]]></foto>
+<foto><![CDATA[https://fotos.estaticosmf.com/fotos_anuncios/00/04/54/78/22/2/g07.jpg?14841524395]]></foto>
+<foto><![CDATA[https://fotos.estaticosmf.com/fotos_anuncios/00/04/54/78/22/2/g08.jpg?14841524404]]></foto>
+<foto><![CDATA[https://fotos.estaticosmf.com/fotos_anuncios/00/04/54/78/22/2/g09.jpg?14841524413]]></foto>
+</fotos>
+<color>Blanco</color>
+<colorTapiceria>Negro</colorTapiceria>
+<cilindrada>N.D.</cilindrada>
+<emisiones>N.D.</emisiones>
+<distintivo>0_EMISIONES</distintivo>
+<consumo>
+<carretera>N.D.</carretera>
+<urbano>N.D.</urbano>
+<mixto>N.D.</mixto>
+</consumo>
+<pinturas>
+<pintura cod="NB5" precio="0,00"><![CDATA[Blanco Luminoso]]></pintura>
+</pinturas>
+<tapicerias>
+</tapicerias>
+<extras>
+<extra cod="383" precio="0,00"><![CDATA[Manual en Espanol]]></extra>
+<extra cod="4U2" precio="0,00"><![CDATA[QUick charger]]></extra>
+<extra cod="6AC" precio="0,00"><![CDATA[Llamada de emergencia inteligente]]></extra>
+<extra cod="6AE" precio="0,00"><![CDATA[Teleservices]]></extra>
+<extra cod="7A6" precio="0,00"><![CDATA[Extensión garantía + 12 meses]]></extra>
+<extra cod="8CA" precio="0,00"><![CDATA[Versión para EU]]></extra>
+</extras>
+<serie></serie>
+<observaciones><![CDATA[BMW BYMYCAR MADRID, Concesionario Oficial BMW Motorrad en MADRID. Financiación a su medida. Consultar condiciones. Motos de ocasión en perfecto estado, totalmente revisadas, con garantía oficial BMW 2 AÑOS, BMW PREMIUM SELECTION certificado. Disponemos de la moto de ocasión que USTED NECESITA.
+Financiación BMW Bank a medida.
+Gestionamos envíos económicos a toda España.
+BMW BYMYCAR MADRID, no se responsabiliza de los posibles errores derivados del volcado de datos al portal online. Confirmar información del vehículo en el concesionario.]]></observaciones>
+<notaInterna><![CDATA[Motorrad CE 04  30 kw  Fecha Fabrica: 2022-12-07  PINTURA:(NB5) Blanco Luminoso  TAPIZADO:(0000)   RESTO EXTRAS: 383,4U2,6AC,6AE,7A6,8CA]]></notaInterna>
+</anuncio>
+<anuncio>
 <motorflashID>48929986</motorflashID>
 <dealerID>238</dealerID>
 <instalacion><![CDATA[BymyCar Madrid Motorrad - Las Tablas]]></instalacion>
@@ -625,7 +705,7 @@ BMW BYMYCAR MADRID, no se responsabiliza de los posibles errores derivados del v
 <colorTapiceria>Negro</colorTapiceria>
 <cilindrada>1254</cilindrada>
 <emisiones>110</emisiones>
-<distintivo>C</distintivo>
+<distintivo>N.D.</distintivo>
 <consumo>
 <carretera>N.D.</carretera>
 <urbano>N.D.</urbano>
@@ -25732,7 +25812,7 @@ BMW BYMYCAR MADRID, no se responsabiliza de los posibles errores derivados del v
 <matricula>1749KMN</matricula>
 <chasis>WDD2050041R381257</chasis>
 <marca><![CDATA[Mercedes-Benz]]></marca>
-<modelo><![CDATA[Clase A]]></modelo>
+<modelo><![CDATA[]]></modelo>
 <version><![CDATA[]]></version>
 <compraDMS>2025-05-21</compraDMS>
 <c02>0</c02>
