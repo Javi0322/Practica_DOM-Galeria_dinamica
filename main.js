@@ -135,7 +135,7 @@ fetch('./stock1.xml')
         distintivo: v.getElementsByTagName('distintivo')[0]?.textContent ?? '',
         carroceria,
         url: `https://www.bymycar.madrid/ficha-vehiculo-ocasion/${carroceria}/${motorflashID}`,
-        foto: v.getElementsByTagName('foto')[0]?.textContent ?? '',
+        foto: v.getElementsByTagName('foto')[0]?.textContent ?? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiLUXYAC-mJC1jWc36-WVG1LJyVNzW3AczJQ&s',
         motorflashID: motorflashID
       })
     }
